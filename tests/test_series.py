@@ -1,5 +1,5 @@
 
-from series.series import fib, lucas
+from series.series import fib, lucas, sum_series
 
 def test_fib_0():
     actual = fib(0)
@@ -57,3 +57,47 @@ def test_lucas_14():
     expected = 843
     assert actual == expected
 
+def test_sum_series_fib_0():
+    actual = sum_series(0)
+    expected = 0
+    assert actual == expected
+
+def test_sum_series_fib_1():
+    actual = sum_series(1)
+    expected = 1
+    assert actual == expected
+
+def test_sum_series_fib_5():
+    actual = sum_series(5)
+    expected = 5
+    assert actual == expected
+
+def test_sum_series_lucas_0():
+    actual = sum_series(0, 2, 1)
+    expected = 2
+    assert actual == expected
+
+def test_sum_series_lucas_1():
+    actual = sum_series(1, 2, 1)
+    expected = 1
+    assert actual == expected
+
+def test_sum_series_lucas_5():
+    actual = sum_series(5, 2, 1)
+    expected = 11
+    assert actual == expected
+
+def test_sum_series_other_0():
+    actual = sum_series(0, 4, 10)
+    expected = 4
+    assert actual == expected
+
+def test_sum_series_other_1():
+    actual = sum_series(1, 4, 10)
+    expected = 10
+    assert actual == expected
+
+def test_sum_series_other_5():
+    actual = sum_series(5, 4, 10)
+    expected = 62
+    assert actual == expected
